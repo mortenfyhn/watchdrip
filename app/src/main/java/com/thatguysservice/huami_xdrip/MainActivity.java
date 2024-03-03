@@ -283,24 +283,10 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     public void updateMiBandBG(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(HuamiXdrip.getAppContext().getResources().getString(R.string.miband_bg_dialog_title));
-        builder.setPositiveButton(HuamiXdrip.getAppContext().getResources().getString(R.string.yes), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-                BroadcastService.initialStartIfEnabled();
-            }
-        });
+        // This used to have a confirmation dialog, but
+        // I removed it because I always pressed yes anyway.
 
-        builder.setNegativeButton(HuamiXdrip.getAppContext().getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-
-        AlertDialog alert = builder.create();
-        alert.show();
+        BroadcastService.initialStartIfEnabled();
     }
 
     @Override
