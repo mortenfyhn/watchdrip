@@ -204,7 +204,7 @@ public class BroadcastService extends Service {
     public Settings getSettings() {
         Settings settings = new Settings();
         settings.setGraphStart(Constants.HOUR_IN_MS * MiBandEntry.getGraphHours());
-        settings.setGraphEnd(Constants.MINUTE_IN_MS * 30);
+        settings.setGraphEnd(0);  // No room for prediction, full width graph
         settings.setApkName(getString(R.string.app_name));
         settings.setDisplayGraph(true);
         return settings;
