@@ -458,9 +458,9 @@ public class DisplayData {
             } catch (JSONException e) {
             }
 
-            setPumpIob(getDouble(pumpIob, 2));
-            setPumpReservoir(String.valueOf(pumpReservoir));
-            setPumpBattery(String.valueOf(pumpBattery));
+            setPumpIob(String.format("%.1f", pumpIob));
+            setPumpReservoir(String.format("%.0f", pumpReservoir));
+            setPumpBattery(String.format("%.0f", pumpBattery));
 
             //setBatteryLevel(bundle.getInt("phoneBattery"));
             setBatteryLevel(PowerStateReceiver.getBatteryPercentage(HuamiXdrip.getAppContext()));
