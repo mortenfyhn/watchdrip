@@ -1,21 +1,56 @@
 {
   "info": {
     "watch_type": "miband4",
-    "description": "Default watchface for MiBand4",
-    "author": "bigdigital",
-    "version": "1.0"
+    "description": "Medtronic 780G-tailored watchface",
+    "author": "mortenfyhn",
+    "version": "0.0"
   },
-  "use_custom_arrows": false,
+  "use_custom_arrows": true,
   "arrow_position": {
     "x": 83,
-    "y": 76
+    "y": 112
+  },
+  "graph": {
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "width": 120,
+    "height": 120,
+    "in_range_line": {
+      "color": "#ff1ba8c6",
+      "has_lines": false,
+      "line_thickness": 1,
+      "has_points": true
+    },
+    "low_val_line": {
+      "color": "#ff1ba8c6",
+      "has_lines": false,
+      "line_thickness": 1,
+      "has_points": true
+    },
+    "high_val_line": {
+      "color": "#ff1ba8c6",
+      "has_lines": false,
+      "line_thickness": 1,
+      "has_points": true
+    },
+    "predictive_line": {
+      "display": false,
+      "color": "#ff00ff"
+    },
+    "poly_predictive_line": {
+      "display": false,
+      "color": "#00ffff"
+    },
+    "bg_color": "#000000"
   },
   "bg_value_text": {
-    "color_high": "#ffffa0a0",
-    "color_low": "#ff8bbbff",
+    "color_high": "#ffffffff",
+    "color_low": "#ffffffff",
     "position": {
       "x": 42,
-      "y": 113
+      "y": 149
     },
     "text_pattern": "$value",
     "text_settings": {
@@ -27,52 +62,39 @@
       "text_style": "bold"
     }
   },
-  "delta_text": {
+  "delta_time_text": {
     "position": {
-      "x": 0,
-      "y": 132
-    },
-    "text_pattern": "$value at $time",
-    "outdated_text_pattern": "$value $time ago",
-    "text_settings": {
-      "font_family": "Roboto-Regular",
-      "font_size": 18,
-      "text_align": "right"
-    }
-  },
-  "graph": {
-    "bg_color": "#000000",
-    "height": 84,
-    "position": {
-      "x": 0,
-      "y": 0
-    },
-    "width": 120
-  },
-  "iob_text": {
-    "position": {
-      "x": 0,
+      "x": 55,
       "y": 14
     },
-    "text_pattern": "IoB: $value",
+    "text_pattern": "at $time",
     "text_settings": {
-      "font_family": "Roboto-Regular",
+      "font_family": "Roboto-Bold",
       "font_size": 17
     }
   },
-  "treatment_text": {
+  "pump_iob_text": {
     "position": {
       "x": 0,
-      "y": 151
+      "y": 32
     },
-    "text_pattern": "$value at $time",
-    "outdated_text_pattern": "$value $time ago",
+    "text_pattern": "$value active",
     "text_settings": {
-      "font_family": "Roboto-Regular",
-      "font_size": 18,
-      "text_align": "right"
+      "font_family": "Roboto-Bold",
+      "font_size": 17
     }
   },
+  // "pump_reservoir_text": {
+  //   "position": {
+  //     "x": 0,
+  //     "y": 108
+  //    },
+  //    "text_pattern": "$value in pump",
+  //    "text_settings": {
+  //       "font_family": "Roboto-Bold",
+  //       "font_size": 17
+  //    }
+  // },
   "no_readings_text": {
     "position": {
       "x": 0,
